@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/signup_phone.css">
+    <link rel="icon" type="image/png" href="../resourses/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>
+            <a id="heading" href="load">
+                <span>
+                    <span style="color: blueviolet;" class="f_alphabet">M</span>ATH&nbsp;&nbsp;
+                </span>
+                <span>
+                    <span style="color: blueviolet;" class="f_alphabet">F</span>ORMULAE
+                </span>
+            </a>
+        </h1>
+        <div id="alert" style="display: flex; justify-self: start; width: 66.5vw;">
+            <% if (locals.error) { %>
+                <div class="alert_body">
+                    <div id="lottieCross" style="height: 6.5vh; width: 6.5vh;"></div>
+                    <p>
+                        <% const errors=locals.error.split(' '); %>
+                        <% errors.forEach((error) => { %>
+                            <span style="color: blueviolet"><%= error.charAt(0) %></span><%= error.slice(1) %>
+                        <% }); %>
+                    </p>                 
+                </div>
+            <% } %>
+            <% if (locals.successes) { %>
+                <div class="alert_body">
+                    <div id="lottieTick" style="height: 5vh; width: 5vh;"></div>
+                    <p>
+                        <% const successes=locals.successes.split(' '); %>
+                        <% successes.forEach((success) => { %>
+                            <span style="color: blueviolet"><%= success.charAt(0) %></span><%= success.slice(1) %>
+                        <% }); %>
+                    </p>                 
+                </div>
+            <% } %>
+        </div>
+        <% if (locals.redirect) { %>    
+            <head>
+                <meta http-equiv="refresh" content="<%= locals.redirectTime / 1000 %>;url=<%= locals.redirectUrl %>">
+            </head>
+        <% } %> 
+    </div>
+
+    <div id="signup_in">
+        <div id="signup_body" class="s_b">
+            <div id="signup">
+                <div id="lottieSignup" class="shift_left"></div>
+                <form id="signup_form" class="shift_right" action="/signup" method="post">
+                    <div id="signup_popup">
+                        <p id="signup_form_p"><span style="color: blueviolet;">S</span>ign&nbsp;<span
+                                style="color: blueviolet;">U</span>p
+                        </p>
+                        <div class="input_field">
+                            <input required type="text" name="name" id="name" onkeyup="validateName()">
+                            <label for="name"><i class="fa fa-user" style="color: blueviolet;"></i> Name</label>
+                            <span id="_name_err"> </span>
+                        </div>
+                        <div class="input_field">
+                            <input required type="text" name="email" id="email" onkeyup="validateEmail()">
+                            <label for="email"><i class="fa fa-envelope" style="color: blueviolet;"></i> Email
+                                ID</label>
+                            <span id="_email_err"> </span>
+                        </div>
+                        <div class="input_field">
+                            <input required type="text" name="password" id="password" onkeyup="validatePassword()">
+                            <label for="password"><i class="fa fa-lock" style="color: blueviolet;"></i>
+                                Password</label>
+                            <span id="_password_err"></span>
+                        </div>
+                    </div>
+                    <span id="submit_err"
+                        style="display: flex; color: rgb(161, 161, 161); font-size: 0.85rem; justify-content: center;"></span>
+                    <div id="signup_submit">
+                        <input type="reset" value="Reset" id="reset">
+                        <button type="submit" id="submit">SignUp </button>
+                    </div>
+                </form>
+            </div>
+            <div id="signup_switch_over">
+                <p>Already have an account?</p>
+                <div onclick="switch_over1()">Sign In</div>
+            </div>
+        </div>
+
+        <div id="signin_body" class="s_b hide">
+            <div id="signin">
+                <form id="signin_form" class="shift_left" action="/signin" method="post">
+                    <div id="signin_popup">
+                        <p id="signin_form_p"><span style="color: blueviolet;">S</span>ign&nbsp;<span
+                                style="color: blueviolet;">I</span>n
+                        </p>
+                        <div class="input_field">
+                            <input required type="text" name="email1" id="email1" onkeyup="validateEmail1()">
+                            <label for="email1"><i class="fa fa-envelope" style="color: blueviolet;"></i> Email
+                                ID</label>
+                            <span id="_email_err1"> </span>
+                        </div>
+                        <div class="input_field">
+                            <input required type="text" name="password1" id="password1" onkeyup="validatePassword1()">
+                            <label for="password1"><i class="fa fa-lock" style="color: blueviolet;"></i>
+                                Password</label>
+                            <span id="_password_err1"> </span>
+                        </div>
+                    </div>
+                    <span id="submit_err"
+                        style="display: flex; color: rgb(161, 161, 161); font-size: 0.85rem; justify-content: center;"></span>
+                    <div id="signin_submit">
+                        <input type="reset" value="Reset" id="reset">
+                        <button type="submit" id="submit">SignIn </button>
+                    </div>
+                </form>
+                <div id="lottieSignin" class="shift_right"></div>
+            </div>
+            <div id="signin_switch_over">
+                <div onclick="switch_over2()">Sign Up</div>
+                <p>And create an account...</p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/signup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+@import "scrollBar.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(blueviolet, blueviolet, rgb(36, 36, 36));
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#heading {
+    display: flex;
+    flex-direction: row;
+    background: #242424; 
+    border-radius: 20px; 
+    color: white;
+    padding: 0vh 1.5vh;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(108, 108, 108, 0.418);
+}
+
+
+h1 {
+    font-size: 2rem;
+    height: 8vh;
+    color: gray;
+    padding: 0vh 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.alert_body{
+    height: 5vh; 
+    width: 50vw; 
+    border-radius: 20px; 
+    background: #242424; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: opacity 0.5s
+}
+.alert_body p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#lottieSignin,
+#lottieSignup {
+    width: 400px;
+}
+
+#signup_in {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup_body,
+#signin_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #signup_form,
+#lottieSignin {
+    position: relative;
+    left: 0;
+    transition: left 0.5s;
+}
+
+#signin_form,
+#lottieSignup {
+    position: relative;
+    right: 0;
+    transition: right 0.5s;
+}
+
+#signup_form.animate1,
+#lottieSignin.animate1 {
+    left: 40vw;
+}
+
+#signin_form.animate2,
+#lottieSignup.animate2 {
+    right: 40vw;
+} */
+
+
+#signup_form,
+#lottieSignin {
+    position: relative;
+    right: 0;
+    transition: right 0.5s;
+}
+
+#signin_form,
+#lottieSignup {
+    position: relative;
+    left: 0;
+    transition: left 0.5s;
+}
+
+#signin_form.onload1{
+    left: 40vw;
+}
+#lottieSignin.onload2{
+    right: 40vw;
+}
+
+#signin_form.animate1,
+#lottieSignup.animate1 {
+    left: 40vw;
+}
+
+#signup_form.animate2,
+#lottieSignin.animate2 {
+    right: 40vw;
+}
+
+#signin_body.hide,
+#signup_body.hide {
+    display: none;
+
+}
+
+
+
+#signup_switch_over,
+#signin_switch_over {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+#signup_switch_over p,
+#signup_switch_over div,
+#signin_switch_over p,
+#signin_switch_over div {
+    cursor: pointer;
+    margin: 0px 20px;
+}
+
+#signup_switch_over p,
+#signin_switch_over p {
+    color: grey;
+}
+
+#signup_switch_over div,
+#signin_switch_over div {
+    color: white;
+}
+
+#signup_switch_over div:hover,
+#signin_switch_over div:hover {
+    color: #8a2be2;
+    transition: 0.5s;
+}
+
+#signup,
+#signin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    width: 80vw;
+}
+
+#signup_form,
+#signin_form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 350px;
+    width: 400px;
+    background: #242424;
+}
+
+#signup_popup,
+#signin_popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signup_popup input,
+#signin_popup input {
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.input_field {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.input_field span {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(161, 161, 161);
+    font-size: 0.85rem;
+    width: 250px;
+}
+
+/* #submit_err{
+    display: block;
+    right: 0;
+    top: -25px;
+    color: rgb(161, 161, 161);
+    font-size: 0.85rem;
+} */
+#_name_err i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+#_email_err i {
+    color: rgb(138, 43, 226);
+    font-size: 0.8rem;
+}
+
+#_password_err i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+#_email_err1 i {
+    color: rgb(138, 43, 226);
+    font-size: 0.8rem;
+}
+
+#_password_err1 i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 3px;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 0.7rem;
+}
+
+#name:focus~label,
+#name:valid~label {
+    color: blueviolet;
+}
+
+#email:focus~label,
+#email:valid~label,
+#email1:focus~label,
+#email1:valid~label {
+    color: blueviolet;
+}
+
+#password:focus~label,
+#password:valid~label,
+#password1:focus~label,
+#password1:valid~label {
+    color: blueviolet;
+}
+
+#signup_form_p,
+#signin_form_p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#name,
+#email,
+#password,
+#email1,
+#password1 {
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#signup_submit,
+#signin_submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+#reset,
+#submit {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+#reset:hover {
+    color: rgb(161, 161, 161);
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: blueviolet;
+    transition: 1.5s;
+    cursor: pointer;
+}

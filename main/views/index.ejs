@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Formulae By Rohan Giri</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 950px)" href="../css/index_phone.css">
+    <link rel="icon" type="image/png" href="../resourses/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("hMZT569V4PbGjmyp6");
+        })();
+    </script>
+    <script>
+        MathJax = {
+            svg: {
+                fontCache: 'global',
+                displayAlign: 'left',
+                displayIndent: '1.5em'
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+
+    <!-- <div id="contribute">
+        <a href="contribute_page"><img src="./resourses/contributeLogo.png" id="c_img"></i></a>
+    </div>
+
+    <div id="feedback">
+        <a href="feedback_page"><img src="./resourses/feedbackLogo.png" id="f_img"></i></a>
+    </div> -->
+
+    <%- include('./heading')%>
+        <%- include('./menu')%>
+            <div id="main">
+                <div id="side">
+                    <div class="side0 active_side" id="side_straight"><%- include('./side/side_straight')%></div>
+                    <div class="side0" id="side_circle"><%- include('./side/side_circle')%></div>
+                    <div class="side0" id="side_parabola"><%- include('./side/side_parabola')%></div>
+                    <div class="side0" id="side_ellipse"><%- include('./side/side_ellipse')%></div>
+                    <div class="side0" id="side_hyperbola"><%- include('./side/side_hyperbola')%></div>
+                    <div class="side0" id="side_limit"><%- include('./side/side_limit')%></div>
+                    <div class="side0" id="side_differentiation"><%- include('./side/side_differentiation')%></div>
+                    <div class="side0" id="side_application_differentiation"><%-
+                            include('./side/side_application_differentiation')%></div>
+                    <div class="side0" id="side_indefinite_integration"><%-
+                            include('./side/side_indefinite_integration')%></div>
+                    <div class="side0" id="side_definite_integration"><%- include('./side/side_definite_integration')%>
+                    </div>
+                    <div class="side0" id="side_fundamentals"><%- include('./side/side_fundamentals')%></div>
+                    <div class="side0" id="side_quadratic"><%- include('./side/side_quadratic')%></div>
+                    <div class="side0" id="side_sequence"><%- include('./side/side_sequence')%></div>
+                    <div class="side0" id="side_binomial"><%- include('./side/side_binomial')%></div>
+                    <div class="side0" id="side_permutation"><%- include('./side/side_permutation')%></div>
+                    <div class="side0" id="side_probability"><%- include('./side/side_probability')%></div>
+                    <div class="side0" id="side_complex"><%- include('./side/side_complex')%></div>
+                    <div class="side0" id="side_vector"><%- include('./side/side_vector')%></div>
+                    <div class="side0" id="side_dimension"><%- include('./side/side_dimension')%></div>
+                    <div class="side0" id="side_triangle"><%- include('./side/side_triangle')%></div>
+                    <div class="side0" id="side_inverse_trigono"><%- include('./side/side_inverse_trigono')%></div>
+                    <div class="side0" id="side_statistic"><%- include('./side/side_statistic')%></div>
+                    <div class="side0" id="side_reasoning"><%- include('./side/side_reasoning')%></div>
+                    <div class="side0" id="side_set"><%- include('./side/side_set')%></div>
+                </div>
+                <div id="content">
+                    <div class="content0 active_content" id="straight"><%- include('./content/straight')%></div>
+                    <div class="content0" id="circle"><%- include('./content/circle')%></div>
+                    <div class="content0" id="parabola"><%- include('./content/parabola')%></div>
+                    <div class="content0" id="ellipse"><%- include('./content/ellipse')%></div>
+                    <div class="content0" id="hyperbola"><%- include('./content/hyperbola')%></div>
+                    <div class="content0" id="limit"><%- include('./content/limit')%></div>
+                    <div class="content0" id="differentiation"><%- include('./content/differentiation')%></div>
+                    <div class="content0" id="application_differentiation"><%-
+                            include('./content/application_differentiation')%></div>
+                    <div class="content0" id="indefinite_integration"><%- include('./content/indefinite_integration')%>
+                    </div>
+                    <div class="content0" id="definite_integration"><%- include('./content/definite_integration')%>
+                    </div>
+                    <div class="content0" id="fundamentals"><%- include('./content/fundamentals')%></div>
+                    <div class="content0" id="quadratic"><%- include('./content/quadratic')%></div>
+                    <div class="content0" id="sequence"><%- include('./content/sequence')%></div>
+                    <div class="content0" id="binomial"><%- include('./content/binomial')%></div>
+                    <div class="content0" id="permutation"><%- include('./content/permutation')%></div>
+                    <div class="content0" id="probability"><%- include('./content/probability')%></div>
+                    <div class="content0" id="complex"><%- include('./content/complex')%></div>
+                    <div class="content0" id="vector"><%- include('./content/vector')%></div>
+                    <div class="content0" id="dimension"><%- include('./content/dimension')%></div>
+                    <div class="content0" id="triangle"><%- include('./content/triangle')%></div>
+                    <div class="content0" id="inverse_trigono"><%- include('./content/inverse_trigono')%></div>
+                    <div class="content0" id="statistic"><%- include('./content/statistic')%></div>
+                    <div class="content0" id="reasoning"><%- include('./content/reasoning')%></div>
+                    <div class="content0" id="set"><%- include('./content/set')%></div>
+                </div>
+            </div>
+            <footer>
+                <span id="creater">
+                    <span style="color: rgb(158, 158, 158)">C</span>opyright &#xa9 
+                    <span style="color: rgb(158, 158, 158)">2</span>024 &#xa0
+                    <span style="color: rgb(158, 158, 158)">D</span>esigned
+                    <span style="color: rgb(158, 158, 158)">B</span>y <b><em>
+                    <span style="color: blueviolet;">R</span>&#xf4h&#x40n
+                    <span style="color: blueviolet;">G</span>&#x0129r&#x012D</em></b> &#xa0.&#xa0 
+                    <span style="color: rgb(158, 158, 158)">A</span>ll 
+                    <span style="color: rgb(158, 158, 158)">r</span>ights 
+                    <span style="color: rgb(158, 158, 158)">a</span>re 
+                    <span style="color: rgb(158, 158, 158)">r</span>eserved.
+                </span>
+            </footer>
+            <script type="text/javascript" id="MathJax-script" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script src="../js/index.js"></script>
+</body>
+
+</html>

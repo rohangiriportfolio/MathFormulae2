@@ -1,0 +1,40 @@
+<div id="header">
+    <h1>
+        <a id="heading" href="load">
+            <span>
+                <span style="color: blueviolet;" class="f_alphabet">M</span>ATH&nbsp;&nbsp;
+            </span>
+            <span>
+                <span style="color: blueviolet;" class="f_alphabet">F</span>ORMULAE
+            </span>
+        </a>
+    </h1>
+    <div id="alert"></div>
+    <div id="dropdown">
+        <% if (locals.user) { %>
+            <ul id="dropdown_menu">
+                <!-- <li><a href="/profile" class="dropdown_item"><i class="fa fa-user" style="color: blueviolet; margin: 5px;"></i><%= JSON.parse(JSON.stringify(user)).name %></a></li> -->
+                <li><a href="contribute_page"><i class="fa fa-pencil" style="color: blueviolet; margin: 5px;"></i>Contribute</a></li>
+                <li><a href="feedback_page"><i class="fa fa-star-half-o" style="color: blueviolet; margin: 5px;"></i>Feedback</a></li>
+                <li><a href="/logout"><i class="fa fa-power-off" style="color: blueviolet; margin: 5px;"></i>Logout</a></li>
+            </ul>
+            <div id="dropdown_button">
+                <% if (JSON.parse(JSON.stringify(user)).name.split(' ').length > 1) { %>
+                    <span style="color: blueviolet;"><%= JSON.parse(JSON.stringify(user)).name[0] %></span>
+                    <%= JSON.parse(JSON.stringify(user)).name.split(' ')[1][0] %>
+                <% } 
+                else { %>
+                    <span style="color: blueviolet;"><%= JSON.parse(JSON.stringify(user)).name[0] %></span>
+                <% } %>
+            </div>
+        <% } 
+        else { %>
+            <ul id="dropdown_menu">
+                <li><a href="signin" class="dropdown_item"><i class="fa fa-sign-in" style="color: blueviolet; margin: 5px;"></i>SignIn</a></li>
+                <li><a href="signup" class="dropdown_item"><i class="fa fa-sign-out" style="color: blueviolet; margin: 5px;"></i>SignUp</a></li>
+            </ul>
+            <div id="dropdown_button1"></div>
+        <% } %>
+    </div>
+</div>
+  

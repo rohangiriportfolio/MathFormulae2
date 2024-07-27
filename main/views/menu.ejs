@@ -1,0 +1,70 @@
+<div id="menu">
+    <div id="open_or_close" class="o_or_c" onclick="op_or_cl(), setWidth()">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+    <span id="l_btn" onmousedown="startScrolling1()" onmouseup="stopScrolling1()" onmouseleave="stopScrolling1()"><i
+            class="fa fa-angle-double-left"></i></span>
+    <ul id="menu_item">
+        <li style="border-left: none;"><a href="#"
+                onclick="open_content('straight'),open_side_content('side_straight'), setWidth()"
+                class="content_link active_link">Straight Line</a></li>
+        <li><a href="#" onclick="open_content('circle'),open_side_content('side_circle'), setWidth()"
+                class="content_link">Circle</a></li>
+        <li><a href="#" onclick="open_content('parabola'),open_side_content('side_parabola'), setWidth()"
+                class="content_link">Parabola</a></li>
+        <li><a href="#" onclick="open_content('ellipse'),open_side_content('side_ellipse'), setWidth()"
+                class="content_link">Ellipse</a></li>
+        <li><a href="#" onclick="open_content('hyperbola'),open_side_content('side_hyperbola'), setWidth()"
+                class="content_link">Hyperbola</a></li>
+        <li><a href="#" onclick="open_content('limit'),open_side_content('side_limit'), setWidth()" class="content_link">Limit
+                of Function</a></li>
+        <li><a href="#" onclick="open_content('differentiation'),open_side_content('side_differentiation'), setWidth()"
+                class="content_link">Method of Differentiation</a></li>
+        <li><a href="#"
+                onclick="open_content('application_differentiation'),open_side_content('side_application_differentiation'), setWidth()"
+                class="content_link">Application of Derivatives</a></li>
+        <li><a href="#"
+                onclick="open_content('indefinite_integration'),open_side_content('side_indefinite_integration'), setWidth()"
+                class="content_link">Indefinite Integration</a></li>
+        <li><a href="#"
+                onclick="open_content('definite_integration'),open_side_content('side_definite_integration'), setWidth()"
+                class="content_link">Definite Integration</a></li>
+        <li><a href="#" onclick="open_content('fundamentals'),open_side_content('side_fundamentals'), setWidth()"
+                class="content_link">Fundamentals of Mathematics</a></li>
+        <li><a href="#" onclick="open_content('quadratic'),open_side_content('side_quadratic'), setWidth()"
+                class="content_link">Quadratic Equation</a></li>
+        <li><a href="#" onclick="open_content('sequence'),open_side_content('side_sequence'), setWidth()"
+                class="content_link">Sequence and Series</a></li>
+        <li><a href="#" onclick="open_content('binomial'),open_side_content('side_binomial'), setWidth()"
+                class="content_link">Binomial Theorem</a></li>
+        <li><a href="#" onclick="open_content('permutation'),open_side_content('side_permutation'), setWidth()"
+                class="content_link">Permutation & Combination</a></li>
+        <li><a href="#" onclick="open_content('probability'),open_side_content('side_probability'), setWidth()"
+                class="content_link">Probability</a></li>
+        <li><a href="#" onclick="open_content('complex'),open_side_content('side_complex'), setWidth()"
+                class="content_link">Complex Number</a></li>
+        <li><a href="#" onclick="open_content('vector'),open_side_content('side_vector'), setWidth()"
+                class="content_link">Vectors</a></li>
+        <li><a href="#" onclick="open_content('dimension'),open_side_content('side_dimension'), setWidth()"
+                class="content_link">Dimensions</a></li>
+        <li><a href="#" onclick="open_content('triangle'),open_side_content('side_triangle'), setWidth()"
+                class="content_link">Solution of Triangle</a></li>
+        <li><a href="#" onclick="open_content('inverse_trigono'),open_side_content('side_inverse_trigono'), setWidth()"
+                class="content_link">Inverse Trigonometry</a></li>
+        <li><a href="#" onclick="open_content('statistic'),open_side_content('side_statistic'), setWidth()"
+                class="content_link">Statistics</a></li>
+        <li><a href="#" onclick="open_content('resoning'),open_side_content('side_resoning'), setWidth()"
+                class="content_link">Mathematical Resoning</a></li>
+        <li style="border-right: none;"><a href="#" onclick="open_content('set'),open_side_content('side_set'), setWidth()"
+                class="content_link">Sets & Relations</a></li>
+    </ul>
+    <span id="r_btn" onmousedown="startScrolling()" onmouseup="stopScrolling()" onmouseleave="stopScrolling()"><i
+            class="fa fa-angle-double-right"></i></span>
+    <span style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <input id="search_tab" style="font-family: Arial, FontAwesome" type="text"
+            placeholder="&#xF002;    Search Formulae" onkeyup="search()">
+        </input>
+    </span>
+</div>

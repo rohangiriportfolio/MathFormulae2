@@ -1,0 +1,379 @@
+@import "scrollBar.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(blueviolet, blueviolet, rgb(36, 36, 36));
+    background-attachment: fixed;
+}
+a {
+    text-decoration: none;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#heading {
+    display: flex;
+    flex-direction: row;
+    background: #242424; 
+    border-radius: 20px; 
+    color: white;
+    padding: 0vh 1.5vh;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(108, 108, 108, 0.418);
+}
+
+
+h1 {
+    font-size: 2rem;
+    height: 8vh;
+    color: gray;
+    padding: 0vh 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+#dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0vh 1.5vh;
+}
+
+#dropdown_menu {   
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #242424;
+    border-radius: 20px;
+    height: 5vh;
+    box-shadow: 0px 0px 10px rgba(108, 108, 108, 0.418);
+}
+
+#dropdown_menu li {
+    display: flex;
+    text-decoration: none;
+    margin: 4px;
+}
+
+#dropdown_menu li a {
+    color: white;
+    font-size: 1rem;
+    padding: 1vh;
+}
+
+/* #dropdown_menu li a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: blueviolet;
+} */
+
+#dropdown_menu li a:hover {
+    color: rgb(195, 131, 255);
+}
+
+/* #dropdown_menu li a:hover::after{
+    width: 80%;
+    transition: 500ms;
+} */
+
+#dropdown_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    margin-left: 7px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    background: #242424;
+}
+
+#dropdown_button1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    width: 7vh;
+    cursor: pointer;
+}
+#feedback_body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20vh;
+}
+
+#lottieFeedback{
+    height: 55vh; 
+    width: 40vw;
+}
+
+#lottieArrow{
+    height: 40vh;
+    transform: rotate(-90deg);
+}
+
+
+#box-close {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+#box-close:hover {
+    transition: 0.5s;
+    color: #c2c2c2;
+}
+
+::placeholder {
+    color: #c2c2c2;
+}
+
+#feedback_form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 450px;
+    width: 450px;
+    background: #242424;
+}
+
+#feedback_popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feedback_popup input {
+    background: transparent;
+    color: white;
+    outline: none;
+}
+
+.f_input_field {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.f_input_field span {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(161, 161, 161);
+    font-size: 0.85rem;
+}
+
+/* #submit_err{
+    display: block;
+    right: 0;
+    top: -25px;
+    color: rgb(161, 161, 161);
+    font-size: 0.85rem;
+} */
+#_name_err i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+#_email_err i {
+    color: rgb(138, 43, 226);
+    font-size: 0.8rem;
+}
+
+#_address_err i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+#rate_err i {
+    color: blueviolet;
+    font-size: 0.8rem;
+}
+
+label {
+    height: 100%;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 3px;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 0.7rem;
+}
+
+#_name:focus~label,
+#_name:valid~label {
+    color: blueviolet;
+}
+
+#_email:focus~label,
+#_email:valid~label {
+    color: blueviolet;
+}
+
+#_address:focus~label,
+#_address:valid~label {
+    color: blueviolet;
+}
+
+#rate:focus~label,
+#rate:valid~label {
+    color: blueviolet;
+}
+
+#feedback_form_p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#_name,
+#_email,
+#_address,
+#rate {
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#comments {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    resize: none;
+    outline: none;
+    border: 1px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: transparent;
+    color: white;
+    width: 100%;
+    max-height: 95px;
+    margin: -5px 0px;
+    font-size: 1rem;
+}
+
+/* #rate{
+    text-align: center;
+    border: none;
+    margin-top: -20px;
+} */
+#feedback_form_rate {
+    display: flex;
+    justify-content: center;
+}
+
+#feedback_form_rate span {
+    cursor: pointer;
+}
+#veryBad,#bad,#donotKnow,#good,#veryGood{
+    height: 40px; width: 40px;
+}
+
+#feedback_form_submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+#reset,
+#submit {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+#reset{
+    font-size: 0.9rem;
+}
+
+#reset:hover {
+    color: rgb(161, 161, 161);
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: blueviolet;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+#alert {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#alert.show {
+    opacity: 1;
+}
+
+.yes_no {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+}
+
+#yes:hover {
+    transition: 0.5s;
+    color: blueviolet;
+}
+
+#no:hover {
+    transition: 0.5s;
+    color: rgb(161, 161, 161)
+}
+
+.face{
+    height:2.5vw;
+    width: 2.5vw;
+    margin: 7px;
+}

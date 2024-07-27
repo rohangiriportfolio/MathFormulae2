@@ -1,0 +1,65 @@
+h1{
+    font-size: 1rem;
+}
+
+#heading{
+    flex-direction: column;
+    align-items: center;
+    padding: 0vh 1vh;
+}
+#signup,
+#signin {
+    flex-direction: column;
+    margin-top: 30px;
+    height: 70vh;
+    width: 80vw;
+}
+#signin_form.onload1{
+    left: 0vw;
+    top: 40vh;
+}
+#lottieSignin.onload2{
+    right: 0vw;
+    bottom: 40vh;
+}
+
+#signin_form.animate1,
+#lottieSignup.animate1 {
+    left: 0vw;
+    top: 40vh;
+}
+
+#signup_form.animate2,
+#lottieSignin.animate2 {
+    right: 0vw;
+    bottom: 40vh;
+}
+#signup_form,
+#signin_form {
+    width: 320px;
+    height: 270px;
+}
+#lottieSignin,
+#lottieSignup {
+    width: 320px;
+    height: 270px;
+}
+#signup_form_p,#signin_form_p{
+    font-size: 1.4rem;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.input_field label{
+    font-size: 0.9rem;
+}
+#signup_switch_over,
+#signin_switch_over {
+    height: 15vh;
+}
+.alert_body{
+    width: 64vw; 
+    
+}
+.alert_body p{
+    font-size: 0.7rem;
+}

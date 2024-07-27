@@ -1,0 +1,78 @@
+h1{
+    font-size: 1rem;
+}
+#heading{
+    flex-direction: column;
+    align-items: center;
+    padding: 0vh 1vh;
+}
+#dropdown {
+    flex-direction: column-reverse;
+    padding: 0vh 0.5vh;
+}
+
+#dropdown_button{
+    height: 4vh;
+    width: 4vh;
+    font-size: 1.1rem;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#dropdown_button1{
+    height: 5vh;
+    width: 5vh;
+}
+#dropdown_menu{
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 0px;
+    top: 50px;
+    right: 5px;
+    height: 12vh;
+    z-index: 5;
+}
+#dropdown_menu li{
+    margin: 0px;
+}
+#dropdown_menu li a{
+    font-size: 0.6rem;
+    padding: 0vh 0.5vh;
+}
+#feedback_body{
+    flex-direction: column;
+    padding-top: 0vh;
+}
+#lottieFeedback{
+    width: 100vw;
+}
+#lottieArrow{
+    transform: rotate(0deg);
+    height: 30vh;
+    margin-bottom: 5vh;
+}
+#feedback_form{
+    height: 420px;
+    width: 320px;
+}
+#feedback_form_p{
+    font-size: 1.4rem;
+}
+.f_input_field label{
+    font-size: 0.9rem;
+}
+#veryBad,#bad,#donotKnow,#good,#veryGood{
+    height: 30px; width: 30px;
+}
+#reset{
+    font-size: 0.85rem;
+}
+#submit{
+    font-size: 0.8rem;
+}
+.yes_no {
+    font-size: 0.65rem;
+}

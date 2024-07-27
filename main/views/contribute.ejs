@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute Your Idea</title>
+    <link rel="stylesheet" href="../css/contribute.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/contribute_phone.css">
+    <link rel="icon" type="image/png" href="../resourses/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+
+<body>
+    <%- include('./heading')%>
+        <div id="contribute_body">
+            <div id="lottieContribute"></div>
+            <div id="lottieArrow"></div>
+            <!-- <div id="creation_sec">
+                <div><button id="l_btn">&#60; back /></button></div>
+                <div id="creation">
+                    <span><a href="calculator.html"><img src="calculator_front.png"></a></span>
+                    <span><a href="tic_tac_toe.html"><img src="tic_tac_toe_front.png"></a></span>
+                    <span><a href="stone_paper_scissors.html"><img
+                                src="stone_paper_scissors_front.png"></a></span>
+                    <span><a href="guess.html"><img src="guess_front.png"></a></span>
+                    <span><a href="snake.html"><img src="snake_front.png"></a></span>
+                </div>
+                <div><button id="r_btn">&#60; front /></button></div>
+            </div> -->
+            <form id="contribution_popup" action="/contribute_page" method="post">
+                <p id="contribution_p"><span style="color: blueviolet;">A</span>dd&nbsp;<span
+                        style="color: blueviolet;">Y</span>our&nbsp;<span
+                        style="color: blueviolet;">C</span>ontributions&nbsp;<span
+                        style="color: blueviolet;">!</span>!&nbsp;
+                </p>
+                <!-- <div class="c_input_field">
+                <input required type="text" name="name" id="name" class="c_input">
+                <label for="name"><i class="fa fa-user" style="color: blueviolet;"></i> Name</label>
+            </div> -->
+                <div class="c_input_field">
+                    <input required type="text" name="section" id="section" class="c_input">
+                    <label for="section"><i class='fa fa-puzzle-piece' style="color: blueviolet;"></i></i>
+                        Section</label>
+                </div>
+                <div class="c_input_field">
+                    <textarea required name="contribution" id="contribution" rows="8" maxlength="500"
+                        class="c_input"></textarea>
+                    <label for="contribution"><i class="fa fa-pencil" style="color: blueviolet;"></i>
+                        Contribution</label>
+                </div>
+                <div id="contribution_submit">
+                    <input type="reset" value="Reset" id="reset">
+                    <button type="submit" id="submit">Submit </button>
+                </div>
+            </form>
+        </div>
+        <div id="allContributions">
+            <% allContributions.forEach(contribution=> { %>
+                <div class="contributionCard" data-id="<%= contribution._id %>">
+                    <h3 class="contributionCardTitle">
+                        <i class="fa fa-puzzle-piece" style="margin-right: 5px;"></i>
+                        <%= contribution.section %>
+                    </h3>
+                    <i class="fa fa-pencil"></i>
+                    <p class="contributionCardBody">
+                        <%= contribution.contribution %>
+                    </p>
+
+                    <p class="contributionCardContributedBy">
+                        <span>
+                            <i class="fa fa-clock-o"></i>
+                            <%= moment(contribution.createdAt).fromNow() %>
+                        </span>
+                        <span>
+                            <i class="fa fa-mortar-board"></i>
+                            <%= contribution.contributedBy %>
+                        </span>
+                    </p>
+                    <!-- <p class="contributionCardContributorId">
+                        <%= contribution._id %>         
+                    </p> -->
+                    <p class="contributionCardLike">
+                        <span class="likes" onclick="likes(event)">
+                            <span class="likesIcon">
+                                <% const index=contribution.likes.indexOf(user._id); %>
+                                <% if (index===-1) { %>
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                <% } 
+                                else { %>
+                                    <i class="fa fa-thumbs-up"></i>
+                                <% } %>
+                            </span>
+                            <span class="likesCount">
+                                <%= contribution.likes.length %>
+                            </span>
+                        </span>
+                        <span class="disLikes" onclick="disLikes(event)">
+                            <span class="disLikesIcon">
+                                <% const index1=contribution.disLikes.indexOf(user._id); %>
+                                <% if (index1===-1) { %>
+                                    <i class="fa fa-thumbs-o-up" style="transform: rotate(180deg);"></i>
+                                <% } 
+                                else { %>
+                                    <i class="fa fa-thumbs-up" style="transform: rotate(180deg);"></i>
+                                <% } %>
+                            </span>
+                            <span class="disLikesCount">
+                                <%= contribution.disLikes.length %>
+                            </span>
+                        </span>
+                    </p>
+                </div>
+                <% }) %>
+        </div>
+        <script src="../js/contribute.js"></script>
+
+</body>
+
+</html>

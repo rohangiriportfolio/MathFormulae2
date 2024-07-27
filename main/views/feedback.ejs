@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Feedback</title>
+    <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../css/feedback_phone.css">
+    <link rel="icon" type="image/png" href="../resourses/favicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "hMZT569V4PbGjmyp6",
+            });
+        })();
+    </script>
+
+</head>
+
+<body>
+    
+    <%- include('./heading')%>
+    <!-- <div id="lottieTick" style="height: 50px; width: 50px; position: relative; "></div> -->
+    <div id="feedback_body">
+        <div id="lottieFeedback"></div>
+        <div id="lottieArrow"></div>
+        <form id="feedback_form">
+            <a href="close_popup" id="box-close">
+                <i class="fa fa-close"></i>
+            </a>
+            <div id="feedback_popup">
+                <p id="feedback_form_p"><span style="color: blueviolet;">S</span>hare&nbsp;<span
+                        style="color: blueviolet;">Y</span>our&nbsp;<span
+                        style="color: blueviolet;">F</span>eedback&nbsp;<span style="color: blueviolet;">!</span>!&nbsp;
+                </p>
+                <div class="f_input_field">
+                    <input required type="text" name="name" id="_name" onkeyup="validateName()">
+                    <label for="_name"><i class="fa fa-user" style="color: blueviolet;"></i> Name</label>
+                    <span id="_name_err"> </span>
+                </div>
+                <div class="f_input_field">
+                    <input required type="text" name="email" id="_email" onkeyup="validateEmail()">
+                    <label for="_email"><i class="fa fa-envelope" style="color: blueviolet;"></i> Email
+                        ID</label>
+                    <span id="_email_err"> </span>
+                </div>
+                <div class="f_input_field">
+                    <input required type="text" name="address" id="_address" onkeyup="validateAddress()">
+                    <label for="_address"><i class="fa fa-map-marker" style="color: blueviolet;"></i>
+                        Address</label>
+                    <span id="_address_err"> </span>
+                </div>
+                <div class="f_input_field">
+                    <input required type="text" name="Ratings: " id="rate" onkeyup="validateRatings()">
+                    <label for="rate"><i class="fa fa-star-half-o" style="color: blueviolet;"></i>
+                        Rate My Website Below !!!</label>
+                    <span id="rate_err"> </span>
+                </div>
+                <div id="feedback_form_rate">
+                    <span onclick="very_bad()" id="veryBad" class="face"></span><span onclick="bad()" id="bad"
+                        class="face"></span><span onclick="donot_know()" id="donotKnow" class="face"></span><span
+                        onclick="good()" id="good" class="face"></span><span onclick="very_good()" id="veryGood"
+                        class="face"></span>
+                </div>
+            </div>
+            <span id="submit_err"
+                style="display: flex; color: rgb(161, 161, 161); font-size: 0.85rem; justify-content: center;"></span>
+            <div id="feedback_form_submit">
+                <input type="reset" value="Reset" id="reset">
+                <a href="/load" id="submit" onclick="submitEmail(), validateForm()">Submit </a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/feedback.js"></script>
+</body>
+
+</html>
